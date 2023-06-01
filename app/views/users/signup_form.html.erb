@@ -1,0 +1,19 @@
+<div class="users-new">
+    <div class="login_form-container">
+        <div class="form-heading"><h1>新規登録</h1></div>
+        <div class="login_form-users-form">
+            <div class="login_form-form-body">
+                <%= form_tag("/users/create") do %>
+                    <p>名前</p>
+                    <input type="text" name="name" value="<%= @user.name %>">
+                    <p>メールアドレス</p>
+                    <input type="text" name="email" value="<%= @user.email %>">
+                    <p>パスワード</p>
+                    <input type="password" name="password" value="<%= @user.password %>">
+                    <input type="submit" value="新規登録する">
+                <% end %>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="user_container">
+    <div class="user_index_container">
+        <h1>ユーザー一覧</h1>
+        <% @user.each do |user| %>
+            <div class="user_index_item">
+                <img src="<%= "/user_images/#{user.image_name}" %>">
+                <p class="user_p"><%= link_to(user.name, "/users/#{user.id}") %></p>
+            </div>
+        <% end %>
+    </div>
+</div>

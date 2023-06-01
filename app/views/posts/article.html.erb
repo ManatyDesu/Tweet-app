@@ -1,0 +1,20 @@
+<div class="article_index_container">
+    <div class="article_index_container">
+        <div class="article_index_item">
+            <img src="<%= "/user_images/#{@post.user.image_name}" %>">
+            <p>
+                <%= @post.user.name %>
+            </p>
+            <p>
+                <%= @post.content %>
+            </p>
+            <div class="article_time">
+                <%= @post.created_at %>
+            </div>
+            <div class="article_edit_destroy">
+                <%= link_to "編集", "/posts/#{@post.id}/edit" %>
+                <%= link_to "削除", "/posts/#{@post.id}/destroy", data: {turbo_method: :post} %>
+            </div>
+        </div>
+    </div>
+</div>

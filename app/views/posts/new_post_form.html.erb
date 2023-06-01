@@ -1,0 +1,15 @@
+<div class="users-new">
+    <div class="login_form-container">
+        <div class="form-heading"><h1>新規投稿</h1></div>
+        <div class="new_post_form-users-form">
+            <div class="new_post_form-form-body">
+                <%= form_tag("/posts/#{@current_user_id}/new_post") do %>
+                    <p>投稿内容</p>
+                    <textarea name="content" value="<%= @content %>"></textarea>
+                    <input type="submit" value="投稿する">
+                <% end %>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
