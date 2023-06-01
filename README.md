@@ -36,6 +36,10 @@ postsコントローラとindexアクションをコマンドにより作成す�
 ```
 rails generate controller posts index
 ```
+usersコントローラとindexアクションをコマンドにより作成する
+```
+rails generate controller users index
+```
 モデルの作成
 ```
 rails g model Post content:text user_id:integer
