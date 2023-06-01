@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="home_index_container">
+        <% @posts.order(id: :desc).each do |post| %>
+            <div class="home_index_item">
+                <img src="<%= "/user_images/#{post.user.image_name}" %>">
+                <p><%= post.user.name %></p>
+                <p class="time"><%= post.created_at %></p>
+                <%= link_to(post.content, "/posts/#{post.id}", class:"home_index_link") %>
+            </div>
+        <% end %>
+    </div>
+</div>
